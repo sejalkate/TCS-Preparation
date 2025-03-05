@@ -1,0 +1,21 @@
+package tcs_practice;
+public class FibonacciUsingRecursion
+{
+	public static void fibonacci(int terms)
+	{
+		int num1=0,num2=1;
+		for(int i=0;i<terms;i++)
+		{
+			System.out.print(num1+" ");
+			int num3=num1+num2;
+			num1=num2;
+			num2=num3;
+		}
+	}
+	public static void main(String[] args)
+	{
+		System.out.println("Printing the Fibonacci Series");
+		int terms=15;
+		fibonacci(terms);
+	}
+}
