@@ -1,0 +1,26 @@
+package tcs_practice;
+public class Prime
+{
+	public static int check_prime(int num)
+	{
+		if(num%2==0)
+		{
+			return 0;
+		}
+		return 1;
+	}
+	public static void main(String[] args) 
+	{
+		int num=93;
+		int res=check_prime(num);
+		if(res==1)
+		{
+			System.out.println("Prime Number");
+		}
+		else
+		{
+			System.out.println("Not Prime Number");
+		}
+	}
+}
+
