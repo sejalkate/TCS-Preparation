@@ -1,0 +1,39 @@
+package tcs_practice;
+public class ArmstrongNumber 
+{
+	public static int find_digit(int num)
+	{
+		int count=0;
+		while(num!=0)
+		{
+			num=num/10;
+			count++;
+		}
+		return count;
+	}
+	public static int find_armstrong(int num)
+	{
+		int digit=find_digit(num);
+		int res=0;
+		while(num!=0)
+		{
+			int rem=num%10;
+			res=(int)Math.pow(rem,digit)+res;
+			num=num/10;
+		}
+		return res;
+	}
+	public static void main(String[] args)
+	{
+		int num=1634;
+		int arm=find_armstrong(num);
+		if(num==arm)
+		{
+			System.out.println("Armstrong Number");
+		}
+		else
+		{
+			System.out.println("Not a armstrong Number");
+		}
+	}
+}
