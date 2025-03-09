@@ -1,0 +1,37 @@
+package tcs_practice;
+public class MatrixMultiplication 
+{
+	public static void main(String[] args)
+	{
+		int mat1[][]= {
+				{1,2,3},
+				{4,5,6}
+			};
+		int mat2[][]= {
+				{6,5},
+				{4,3},
+				{2,1}
+			};
+		int r1 = mat1.length;         // Rows of mat1
+        int c1 = mat1[0].length;      // Columns of mat1 (also rows of mat2)
+        int c2 = mat2[0].length;      // Columns of mat2
+        int result[][]=new int[r1][c2];
+        for(int i=0;i<r1;i++)
+        {
+        	for(int j=0;j<c2;j++)
+        	{
+        		for(int k=0;k<c1;k++)
+        		{
+        			result[i][j]+=mat1[i][k]*mat2[k][j];
+        		}
+        	}
+        }
+        System.out.println("Resultant Matrix: ");
+        for (int i = 0; i < r1; i++) {
+            for (int j = 0; j < c2; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+	}
+}
